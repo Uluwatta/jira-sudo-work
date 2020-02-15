@@ -1,24 +1,24 @@
-<atlassian-plugin key="${atlassian.plugin.key}" name="${project.name}" plugins-version="2">
-    <plugin-info>
-        <description>${project.description}</description>
-        <version>${project.version}</version>
-        <vendor name="${project.organization.name}" url="${project.organization.url}" />
-        <param name="plugin-icon">images/pluginIcon.png</param>
-        <param name="plugin-logo">images/pluginLogo.png</param>
-    </plugin-info>
+<?xml version="1.0" encoding="UTF-8"?>
 
-    <!-- add our i18n resource -->
-    <resource type="i18n" name="i18n" location="sudowork"/>
-    
-    <!-- add our web resources -->
-    <web-resource key="sudowork-resources" name="sudowork Web Resources">
-        <dependency>com.atlassian.auiplugin:ajs</dependency>
-        
-        <resource type="download" name="sudowork.css" location="/css/sudowork.css"/>
-        <resource type="download" name="sudowork.js" location="/js/sudowork.js"/>
-        <resource type="download" name="images/" location="/images"/>
-
-        <context>sudowork</context>
-    </web-resource>
-    
+<atlassian-plugin key="${atlassian.plugin.key}" name="${project.name}" plugins-version="2"> 
+  <plugin-info> 
+    <description>${project.description}</description>  
+    <version>${project.version}</version>  
+    <vendor name="${project.organization.name}" url="${project.organization.url}"/>  
+    <param name="plugin-icon">images/pluginIcon.png</param>  
+    <param name="plugin-logo">images/pluginLogo.png</param> 
+  </plugin-info>  
+  <!-- add our i18n resource -->  
+  <resource type="i18n" name="i18n" location="sudowork"/>  
+  <!-- add our web resources -->  
+  <web-resource key="sudowork-resources" name="sudowork Web Resources"> 
+    <dependency>com.atlassian.auiplugin:ajs</dependency>  
+    <resource type="download" name="sudowork.css" location="/css/sudowork.css"/>  
+    <resource type="download" name="sudowork.js" location="/js/sudowork.js"/>  
+    <resource type="download" name="images/" location="/images"/>  
+    <context>sudowork</context> 
+  </web-resource>  
+  <rest name="Sudo Work Rest Resource" i18n-name-key="sudo-work-rest-resource.name" key="sudo-work-rest-resource" path="/sudowork" version="1.0"> 
+    <description key="sudo-work-rest-resource.description">The Sudo Work Rest Resource Plugin</description> 
+  </rest>
 </atlassian-plugin>
